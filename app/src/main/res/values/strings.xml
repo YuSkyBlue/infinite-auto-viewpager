@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">experiment</string>
+    <string name="viewpager2_banner">%1$d / %2$d 모두보기</string>
+</resources>
