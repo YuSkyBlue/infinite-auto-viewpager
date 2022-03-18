@@ -14,7 +14,8 @@
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:visibility="visible"
             app:layout_constraintDimensionRatio="1:0.6"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,8 +29,29 @@
             android:paddingVertical="4dp"
             android:textColor="@color/white"
             android:textSize="12sp"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/view_pager"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="1 / 3 모두보기" />
+
+        <!--        <include layout="@layout/material_button"-->
+        <!--            android:id="@+id/layout"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+        <Button
+            android:id="@+id/buttonToViewpager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hello"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_pager"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </layout>

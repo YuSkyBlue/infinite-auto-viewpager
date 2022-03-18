@@ -4,6 +4,7 @@ package com.example.experiment
 import android.animation.Animator
 import android.animation.TimeInterpolator
 import android.animation.ValueAnimator
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AccelerateDecelerateInterpolator
@@ -12,6 +13,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.example.experiment.databinding.ActivityMainBinding
+import com.example.experiment.tablayout.SecondActivity
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import java.lang.Math.ceil
@@ -75,7 +77,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-
+        binding.buttonToViewpager.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun scrollJobCreate() {
@@ -112,6 +117,7 @@ class MainActivity : AppCompatActivity() {
         animator.duration = duration
         animator.start()
     }
+
 
     override fun onResume() {
         super.onResume()
